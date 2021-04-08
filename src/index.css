@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding: 2rem;
+}
+
+div > * {
+    margin-bottom: 1rem;
+}
+
+ol {
+    padding: 0 2rem;
+}
+
+input {
+    padding: 3px;
+    width: 100%;
+    font-size: 1.2rem;
+}
