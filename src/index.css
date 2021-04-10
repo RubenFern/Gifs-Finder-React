@@ -21,3 +21,21 @@ input {
     width: 100%;
     font-size: 1.2rem;
 }
+
+.card {
+    align-content: center;
+    border-radius: 6px;
+    overflow: hidden;
+    margin: 0 10px 10px 0;
+}
+
+.card img {
+    max-height: 170px;
+    border-radius: 15px;
+}
+
+.card-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
