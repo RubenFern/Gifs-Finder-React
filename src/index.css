@@ -5,37 +5,116 @@
 
 body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    padding: 2rem;
+    background-color: #353535;
 }
 
-div > * {
-    margin-bottom: 1rem;
+header {
+    background-color: #202020;
 }
 
-ol {
-    padding: 0 2rem;
+h2 {
+    padding-top: 10px;
+    text-align: center;
+    font-size: 2rem;
+    color: #fff;
 }
 
-input {
-    padding: 3px;
-    width: 100%;
+h3 {
+    color: #C50000;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1rem;
+}
+
+.layout {
+    padding: 0 20px 0 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+input[type="text"] {
+    padding: 5px;
+    padding-left: 10px;
+    width: 80%;
+    margin: 10px 0 10px 0;
     font-size: 1.2rem;
+    border-radius: 5px;
+    border: none;
 }
 
-.card {
-    align-content: center;
-    border-radius: 6px;
-    overflow: hidden;
-    margin: 0 10px 10px 0;
+input[type="submit"] {
+    border: none;
+    border-radius: 5px;
+    width: 100px;
+    height: 40px;
+    margin-bottom: 10px;
+    background-color: #4162B9;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
 }
 
-.card img {
-    max-height: 170px;
+input:focus {
+    outline: none;
+}
+
+input[type="submit"]:hover {
+    background-color: #273c75;
+}
+
+img {
+    max-height: 190px;
     border-radius: 15px;
 }
 
 .card-grid {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    row-gap: 10px;
+}
+
+.card {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (min-width: 800px) {
+    .card-grid {
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: auto;
+        gap: 10px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .card-grid {
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: auto;
+        gap: 10px;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    .card-grid {
+        grid-template-columns: repeat(4, auto);
+        grid-template-rows: auto;
+        gap: 10px;
+    }
+}
+
+@media screen and (min-width: 1900px) {
+    .card-grid {
+        grid-template-columns: repeat(5, auto);
+        grid-template-rows: auto;
+        gap: 10px;
+    }
 }
