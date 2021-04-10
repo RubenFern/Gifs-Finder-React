@@ -10,15 +10,22 @@ export const SearchCategories = (props) =>
     {
         e.preventDefault();
 
-        // Si tiene contenido añado la búsqueda al final del array de las categorias
+        // Si tiene contenido sobreescribo el valor de categories 
+        // El valor del input se obtiene de la función searchGif pues cambia el estado del useState
         if (inputValue.length > 0)
         {
             setInputValue(inputValue.trim());
-            props.setCategories(gif => [inputValue, ...gif]);
+            props.setCategories(inputValue);
+
+            // Si quisiese mostrar todas la búsquedas
+            //props.setCategories(gif => [inputValue, ...gifs]);
+
+            // Empty the seeker
+            document.getElementById("browser").value = '';
         }
     }
 
-    // Function to search GIFs. Cuando cambia el estado del input almaceno su valor
+    // Cuando cambia el estado del input almaceno su valor en el useState.
     const searchGif = (e) =>
     {
         setInputValue(e.target.value);
@@ -27,7 +34,9 @@ export const SearchCategories = (props) =>
     // Muestra la barra de búsqueda
     return (
         <form onSubmit={handleSubmit}>
-            <input type="text" placeholder="Search GIFs" onChange={searchGif} name="" id=""/>
+            <input type="text" placeholder="Search GIFs" onChange={searchGif} id="browser" />
+
+            <input type="submit" value="Search"/>
         </form>
     )
 }
