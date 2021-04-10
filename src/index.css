@@ -101,6 +101,10 @@ img {
         grid-template-rows: auto;
         gap: 10px;
     }
+
+    input[type="text"] {
+        width: 60%;
+    }
 }
 
 @media screen and (min-width: 1500px) {
@@ -108,6 +112,10 @@ img {
         grid-template-columns: repeat(4, auto);
         grid-template-rows: auto;
         gap: 10px;
+    }
+
+    input[type="text"] {
+        width: 50%;
     }
 }
 
