@@ -13,19 +13,22 @@ import {SearchCategories} from "./components/SearchCategories";
 
 export const GifApp = () =>
 {
-    const [categories, setCategories] = useState([]);
+    const [categories, setCategories] = useState('');
 
     return (
-        <div>
-            <h2>GIFs-Finder</h2>
-            <SearchCategories setCategories={setCategories} />
-            <hr/>
-
-            <ol>
+        <>
+            <header>
+                <h2>GIFs-Finder</h2>
+                <SearchCategories setCategories={setCategories} />
+                <hr/>
+            </header>
+                    
+            <div>
                 {
-                    categories.map((gif, key) => <GifCard key={key} category={gif}/>)
+                    <GifCard category={categories}/>
                 }
-            </ol>
-        </div>
+            </div>
+        </>
+        
     )
 }
